@@ -4,7 +4,16 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inter: ['Inter', 'sans'],
+        handlee: ['Handlee', 'cursive'],
+        playfair: ['Playfair Display', 'serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        'dm-sans': ['DM Sans', 'sans-serif'],
+      },
+    
+    },
   },
   plugins: [],
 }
