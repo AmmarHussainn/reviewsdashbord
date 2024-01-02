@@ -1,11 +1,13 @@
 // App.js
 import React from "react";
+
 import { Business, Chart, Frame, Graph, Group, Icon, bargraph1, cash, chartgraph, lorem, stars, tick } from "../assets";
 
 const App = () => {
   
+
   return (
-    <div className="h-auto">
+    <div className="">
       <div className="my-2 mx-2 "><h3 className='text-2xl text-white my-3'>Charles Robie</h3>
         <h1 className='text-5xl text-white my-3'>Welcome Reviews Dashboard</h1></div>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 place-content-between gap-4 px-2 place-items-center">
@@ -44,6 +46,8 @@ const App = () => {
       </div>
       <div className="flex items-center lg:flex-nowrap flex-wrap justify-center lg:gap-0 gap-5 ">
         <div className="p-4 py-[30px] m-4 rounded-lg shadow-md bg-[#FFFFFF] flex gap-6 w-full max-w-[716px]">
+      <div className="flex items-center justify-center ">
+        <div className="px-4 py-10 m-4 rounded-lg shadow-md bg-[#FFFFFF] flex gap-6 w-full max-w-[716px]">
           <div className="w-[50%]">
             <h1 className="text-2xl font-bold text-[#3F6884] font-poppins">
               Business Review
