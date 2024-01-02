@@ -1,6 +1,6 @@
 // Sidebar.js
 import React from 'react';
-import { Avatar, activityicon, libraryicon, logouticon, payouticon, schedulesicon, securityicon, settingsicon } from '../assets';
+import { Avatar, activityicon, dashButton, libraryicon, logouticon, payouticon, schedulesicon, securityicon, settingsicon } from '../assets';
 
 const Sidebar = () => {
   return (
@@ -30,8 +30,8 @@ const Sidebar = () => {
      
       {/* Navigation Links */}
       <nav className="flex flex-col gap-2 font-poppins">
-      <button className="font-poppins bg-gradient-to-r from-yellow-500 to-yellow-700 text-white py-2 px-4 rounded mb-4">
-        Dashboard
+      <button className="font-poppins flex gap-3 text-[#2E5671] bg-gradient-to-r from-[#FEC324] to-[#FFD563]  font-bold py-2  px-5 items-center justify-start rounded mb-4">
+       <img src={dashButton} alt="" /><a>Dashboard</a>
       </button>
 
         <div className="flex gap-1 py-1 px-2 hover:border-white hover:border-2 hover:rounded-lg"><img src={activityicon} alt=""/>Activity</div>

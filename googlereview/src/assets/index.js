@@ -18,8 +18,10 @@ import securityicon from "./Images/securityicon.png"
 import settingsicon from "./Images/settingsicon.png"
 import activityicon from "./Images/activityicon.png"
 import logouticon from "./Images/logouticon.png"
+import dashButton from "./Images/dashDabba.png"
 
 export{ 
+    dashButton,
     logouticon,
     activityicon,
     schedulesicon,
