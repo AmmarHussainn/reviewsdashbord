@@ -4,15 +4,15 @@ import { Avatar, activityicon, dashButton, libraryicon, logouticon, payouticon, 
 
 const Sidebar = () => {
   return (
-    <div className="flex max-w-[200px] h-auto items-center gap-20 w-full flex-col  bg-[#2E5671] text-white p-4 ">
+    <div className="flex max-w-[200px] h-auto items-center  gap-20 w-full flex-col  bg-[#2E5671] text-white p-4 ">
       {/* User Info */}
       <div>
 
-      <div className="flex items-center my-10 mb-4">
+      <div className="flex justify-center  mx-auto  my-10 mb-4">
         <img
           src={Avatar}
           alt="User Avatar"
-          className="rounded-full w-12 h-12 mr-2"
+          className="rounded-full w-20 h-20 "
         />
       </div>
       <div className='font-dm-sans'>
@@ -29,7 +29,7 @@ const Sidebar = () => {
       {/* Dashboard Button */}
      
       {/* Navigation Links */}
-      <nav className="flex flex-col gap-2 font-poppins">
+      <nav className="flex  flex-col gap-2 font-poppins">
       <button className="font-poppins flex gap-3 text-[#2E5671] bg-gradient-to-r from-[#FEC324] to-[#FFD563]  font-bold py-2  px-5 items-center justify-start rounded mb-4">
        <img src={dashButton} alt="" /><a>Dashboard</a>
       </button>
@@ -42,7 +42,7 @@ const Sidebar = () => {
         <div className="flex gap-1 py-1 px-2 hover:border-2 hover:rounded-lg"><img src={settingsicon} alt="" />Settings</div>
       </nav>
       <div>
-      <div className="flex gap-1 py-1 px-2 hover:border-2 hover:rounded-lg"><img src={logouticon} alt=""/><p>Log Out</p></div>
+      <div className="flex gap-1 py-1 px-2 hover:border-2 mr-10 hover:rounded-lg"><img src={logouticon} alt=""/><p>Log Out</p></div>
       </div>
     </div>
   );
