@@ -48,13 +48,5 @@ const Sidebar = () => {
   );
 };
 
-const NavLink = ({ to, children }) => (
-  <a
-    href={to}
-    className="text-sm py-1 px-4 transition-colors duration-200 hover:bg-gray-700"
-  >
-    {children}
-  </a>
-);
 
 export default Sidebar;
