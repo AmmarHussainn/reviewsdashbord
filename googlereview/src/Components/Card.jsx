@@ -3,6 +3,7 @@ import React from "react";
 import { Business, Chart, Frame, Graph, Group, Icon, bargraph1, cash, chartgraph, lorem, stars, tick } from "../assets";
 
 const App = () => {
+  
   return (
     <div className="h-auto">
       <div className="my-2 mx-2 "><h3 className='text-2xl text-white my-3'>Charles Robie</h3>
@@ -41,7 +42,7 @@ const App = () => {
           <img src={Chart} alt="" className="w-[50%]" />
         </div>
       </div>
-      <div className="flex items-center justify-center ">
+      <div className="flex items-center lg:flex-nowrap flex-wrap justify-center lg:gap-0 gap-5 ">
         <div className="p-4 py-[30px] m-4 rounded-lg shadow-md bg-[#FFFFFF] flex gap-6 w-full max-w-[716px]">
           <div className="w-[50%]">
             <h1 className="text-2xl font-bold text-[#3F6884] font-poppins">
@@ -69,7 +70,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center ">
+      <div className="flex items-center lg:flex-nowrap flex-wrap lg:gap-0 gap-5 justify-center ">
         <div className="rounded-lg max-w-[350px] w-full shadow-md py-1.5 mx-3 flex-col flex items-start px-4 bg-[#FFFFFF] hover:bg-[#FEC324]">
           <div className="font-dm-sans w-full ">
             <div className="flex justify-between w-full items-center mt-3">
@@ -85,7 +86,7 @@ const App = () => {
         </div>
 
 
-        <div className="rounded-lg  shadow-md mx-2  my-4 flex-col justify-between   flex items-start px-4 bg-[#FFFFFF]">
+        <div className="rounded-lg  shadow-md mx-2  my-4 flex-col   justify-between   flex items-start px-4 bg-[#FFFFFF]">
           <div className="flex gap-5 items-center w-full ">
 
             <div className="font-dm-sans px-3 w-full ">
@@ -100,7 +101,7 @@ const App = () => {
           <div className="flex gap-3 w-full items-end">
 
             <img src={chartgraph} alt="" className="  " />
-            <img src={cash} className="h-[140px] w-[400px]" alt="" />
+            <img src={cash} className="h-[140px] w-full max-w-[400px]" alt="" />
           </div>
         </div>
 
