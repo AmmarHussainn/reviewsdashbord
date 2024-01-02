@@ -34,15 +34,15 @@ const Sidebar = () => {
         Dashboard
       </button>
 
-        <div className="flex gap-1 hover:border-white hover:border-2 hover:rounded-lg"><img src={activityicon} alt=""/>Activity</div>
-        <div className="flex gap-1"><img src={libraryicon} alt="" />Library</div>
-        <div className="flex gap-1"><img src={securityicon} alt="" />Security</div>
-        <div className="flex gap-1"><img src={schedulesicon} alt="" />Schedules</div>
-        <div className="flex gap-1"><img src={payouticon} alt="" />Payouts</div>
-        <div className="flex gap-1"><img src={settingsicon} alt="" />Settings</div>
+        <div className="flex gap-1 py-1 px-2 hover:border-white hover:border-2 hover:rounded-lg"><img src={activityicon} alt=""/>Activity</div>
+        <div className="flex gap-1 py-1 px-2 hover:border-2 hover:rounded-lg"><img src={libraryicon} alt="" />Library</div>
+        <div className="flex gap-1 py-1 px-2 hover:border-2 hover:rounded-lg"><img src={securityicon} alt="" />Security</div>
+        <div className="flex gap-1 py-1 px-2 hover:border-2 hover:rounded-lg"><img src={schedulesicon} alt="" />Schedules</div>
+        <div className="flex gap-1 py-1 px-2 hover:border-2 hover:rounded-lg"><img src={payouticon} alt="" />Payouts</div>
+        <div className="flex gap-1 py-1 px-2 hover:border-2 hover:rounded-lg"><img src={settingsicon} alt="" />Settings</div>
       </nav>
       <div>
-      <div className="flex gap-1"><img src={logouticon} alt=""/><p>Log Out</p></div>
+      <div className="flex gap-1 py-1 px-2 hover:border-2 hover:rounded-lg"><img src={logouticon} alt=""/><p>Log Out</p></div>
       </div>
     </div>
   );
