@@ -8,7 +8,7 @@ import Frame from "./Images/Frame.png"
 import lorem from "./Images/lorem.jpeg"
 import cash from "./Images/cash.jpeg"
 import chartgraph from "./Images/chartgraph.jpeg"
-import bargraph from "./Images/bargraph.jpeg"
+import bargraph1 from "./Images/bargraph1.png"
 import tick from "./Images/tick.png"
 import stars from "./Images/stars.png"
 import libraryicon from "./Images/libraryicon.png"
@@ -28,7 +28,7 @@ export{
     lorem,
     chartgraph,
     cash,
-    bargraph,
+    bargraph1,
     Avatar,
     Graph,
     Chart,

@@ -1,6 +1,6 @@
 // App.js
 import React from "react";
-import { Business, Chart, Frame, Graph, Group, Icon, bargraph, cash, chartgraph, lorem, stars, tick } from "../assets";
+import { Business, Chart, Frame, Graph, Group, Icon, bargraph1, cash, chartgraph, lorem, stars, tick } from "../assets";
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 place-content-between gap-4 px-2 place-items-center">
         <div className="p-4 m-4 rounded-lg w-full max-w-[295px] h-[97px] shadow-md bg-[#FFCF4E] flex">
           <img src={Group} alt="" />
-          <div className="mx-4">
+          <div className="mx-4 text-white">
             <p>Spent this month</p>
             <p className="text-2xl font-bold rounded-lg w-full">$682.5</p>
           </div>
@@ -18,16 +18,16 @@ const App = () => {
 
         <div className="p-4 m-4 w-full max-w-[295px] h-[97px] rounded-lg shadow-md bg-[#FFCF4E] flex">
           <img src={Group} alt="" />
-          <div className="mx-4">
+          <div className="mx-4 text-white">
             <h1 className="text-xl">New Client</h1>
             <p>321</p>
           </div>
-          <img src={Graph} alt="graph" />
+          <img src={Graph} alt="graph" className="w-[80px]"/>
         </div>
 
         <div className="p-4 m-4 rounded-lg w-full max-w-[295px] h-[97px] shadow-md bg-[#FFCF4E] flex">
           <img src={Icon} alt="" />
-          <div className="mx-4">
+          <div className="mx-4 text-white">
             <h1 className="text-xl">Earnings</h1>
             <p className="text-2xl">$350.40</p>
           </div>
@@ -57,7 +57,7 @@ const App = () => {
               readable content of a page when do
             </p>
             <div>
-              <img src={stars} alt=""/>
+              <img src={stars} alt="" />
             </div>
           </div>
           <div className="w-[50%]" >
@@ -70,35 +70,37 @@ const App = () => {
       </div>
 
       <div className="flex items-center ">
-        <div className="rounded-lg shadow-md py-1.5 mx-2 flex-col flex items-start px-4 bg-[#FFFFFF]">
+        <div className="rounded-lg shadow-md py-1.5 mx-2 flex-col flex items-start px-4 bg-[#FFFFFF] hover:bg-[#FEC324]">
           <div className="font-dm-sans w-full ">
             <div className="flex justify-between w-full items-center mt-3">
-
-            <p className="text-xs text-[#A3AED0]">Spent This Month</p>
-            <p className="text-[#3F6884] text-xs font-bold">+2.45%</p>
+              <p className="text-xs text-[#A3AED0]">Spent This Month</p>
+              <p className="text-[#3F6884] text-xs font-bold">+2.45%</p>
             </div>
             <p className="font-bold text-3xl text-[#1B2559] my-2">$682.5</p>
-            <p className="text-xs text-[#3F6884] font-bold flex gap-1"><img src={tick} alt=""/>On track</p>
+            <p className="text-xs text-[#3F6884] font-bold flex gap-1">
+              <img src={tick} alt="" />On track
+            </p>
           </div>
-          <img src={bargraph} alt="" className=" my-3  " />
+          <img src={bargraph1} alt="" className=" my-3  " />
         </div>
 
+
         <div className="rounded-lg  shadow-md mx-2  my-4 flex-col justify-between   flex items-start px-4 bg-[#FFFFFF]">
-           <div className="flex gap-5 items-center w-full ">
+          <div className="flex gap-5 items-center w-full ">
 
-          <div className="font-dm-sans px-3 w-full ">
-            <div className="flex justify-between w-full items-center mt-3">
+            <div className="font-dm-sans px-3 w-full ">
+              <div className="flex justify-between w-full items-center mt-3">
 
-            <p className="text-xs text-[#A3AED0]">Total Month</p>
+                <p className="text-xs text-[#A3AED0]">Total Month</p>
+              </div>
+              <p className="font-bold text-3xl text-[#1B2559] my-2">$682.5</p>
             </div>
-            <p className="font-bold text-3xl text-[#1B2559] my-2">$682.5</p>
+            <img src={lorem} className="w-[350px]" alt="" />
           </div>
-          <img src={lorem} className="w-[350px]" alt="" />
-           </div>
           <div className="flex gap-3 w-full items-end">
 
-          <img src={chartgraph} alt="" className="  " />
-          <img src={cash} className="h-[140px] w-[400px]"  alt="" />
+            <img src={chartgraph} alt="" className="  " />
+            <img src={cash} className="h-[140px] w-[400px]" alt="" />
           </div>
         </div>
 
