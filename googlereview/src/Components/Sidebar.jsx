@@ -4,9 +4,11 @@ import { Avatar } from '../assets';
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col h-full bg-[#2E5671] text-white p-4 ">
+    <div className="flex max-w-[200px] h-full items-center gap-20 w-full flex-col  bg-[#2E5671] text-white p-4 ">
       {/* User Info */}
-      <div className="flex items-center mb-4">
+      <div>
+
+      <div className="flex items-center my-10 mb-4">
         <img
           src={Avatar}
           alt="User Avatar"
@@ -22,14 +24,16 @@ const Sidebar = () => {
             </span>
           </div>
         </div>
+      </div>
 
       {/* Dashboard Button */}
+     
+      {/* Navigation Links */}
+      <nav className="flex flex-col gap-2 font-poppins">
       <button className="font-poppins bg-gradient-to-r from-yellow-500 to-yellow-700 text-white py-2 px-4 rounded mb-4">
         Dashboard
       </button>
 
-      {/* Navigation Links */}
-      <nav className="flex flex-col font-poppins">
         <NavLink to="/activity">Activity</NavLink>
         <NavLink to="/library">Library</NavLink>
         <NavLink to="/security">Security</NavLink>
@@ -37,6 +41,9 @@ const Sidebar = () => {
         <NavLink to="/payouts">Payouts</NavLink>
         <NavLink to="/settings">Settings</NavLink>
       </nav>
+      <div>
+        <p>Log Out</p>
+      </div>
     </div>
   );
 };

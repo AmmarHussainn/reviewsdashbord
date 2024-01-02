@@ -3,7 +3,7 @@ import Card from "../Components/Card"
 
 const Dashboard = () => {
   return (
-    <div className="bg-[#3F6884] w-full">
+    <div className="bg-[#3F6884] h-full w-full">
         
         <Card/>
     </div>
