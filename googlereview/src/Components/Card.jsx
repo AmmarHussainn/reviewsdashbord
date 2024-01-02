@@ -1,8 +1,10 @@
 // App.js
 import React from "react";
+
 import { Business, Chart, Frame, Graph, Group, Icon, bargraph1, cash, chartgraph, lorem, stars, tick } from "../assets";
 
 const App = () => {
+
   return (
     <div className="">
       <div className="my-2 mx-2 "><h3 className='text-2xl text-white my-3'>Charles Robie</h3>
