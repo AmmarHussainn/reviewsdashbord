@@ -1,10 +1,10 @@
 // Sidebar.js
 import React from 'react';
-import { Avatar } from '../assets';
+import { Avatar, activityicon, libraryicon, logouticon, payouticon, schedulesicon, securityicon, settingsicon } from '../assets';
 
 const Sidebar = () => {
   return (
-    <div className="flex max-w-[200px] h-full items-center gap-20 w-full flex-col  bg-[#2E5671] text-white p-4 ">
+    <div className="flex max-w-[200px] h-auto items-center gap-20 w-full flex-col  bg-[#2E5671] text-white p-4 ">
       {/* User Info */}
       <div>
 
@@ -34,15 +34,15 @@ const Sidebar = () => {
         Dashboard
       </button>
 
-        <NavLink to="/activity">Activity</NavLink>
-        <NavLink to="/library">Library</NavLink>
-        <NavLink to="/security">Security</NavLink>
-        <NavLink to="/schedules">Schedules</NavLink>
-        <NavLink to="/payouts">Payouts</NavLink>
-        <NavLink to="/settings">Settings</NavLink>
+        <div className="flex gap-1 hover:border-white hover:border-2 hover:rounded-lg"><img src={activityicon} alt=""/>Activity</div>
+        <div className="flex gap-1"><img src={libraryicon} alt="" />Library</div>
+        <div className="flex gap-1"><img src={securityicon} alt="" />Security</div>
+        <div className="flex gap-1"><img src={schedulesicon} alt="" />Schedules</div>
+        <div className="flex gap-1"><img src={payouticon} alt="" />Payouts</div>
+        <div className="flex gap-1"><img src={settingsicon} alt="" />Settings</div>
       </nav>
       <div>
-        <p>Log Out</p>
+      <div className="flex gap-1"><img src={logouticon} alt=""/><p>Log Out</p></div>
       </div>
     </div>
   );

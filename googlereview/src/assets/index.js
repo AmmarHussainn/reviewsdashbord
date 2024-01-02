@@ -11,8 +11,20 @@ import chartgraph from "./Images/chartgraph.jpeg"
 import bargraph from "./Images/bargraph.jpeg"
 import tick from "./Images/tick.png"
 import stars from "./Images/stars.png"
+import libraryicon from "./Images/libraryicon.png"
+import payouticon from "./Images/payoutsicon.png"
+import schedulesicon from "./Images/schedulesicon.png"
+import securityicon from "./Images/securityicon.png"
+import settingsicon from "./Images/settingsicon.png"
+import activityicon from "./Images/activityicon.png"
+import logouticon from "./Images/logouticon.png"
 
 export{ 
+    logouticon,
+    activityicon,
+    schedulesicon,
+    securityicon,
+    settingsicon,
     lorem,
     chartgraph,
     cash,
@@ -26,4 +38,6 @@ export{
     Frame,
     tick,
     stars,
+    libraryicon,
+    payouticon,
 }
