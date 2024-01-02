@@ -9,6 +9,9 @@ import lorem from "./Images/lorem.jpeg"
 import cash from "./Images/cash.jpeg"
 import chartgraph from "./Images/chartgraph.jpeg"
 import bargraph from "./Images/bargraph.jpeg"
+import tick from "./Images/tick.png"
+import stars from "./Images/stars.png"
+
 export{ 
     lorem,
     chartgraph,
@@ -21,4 +24,6 @@ export{
     Icon,
     Business,
     Frame,
+    tick,
+    stars,
 }
