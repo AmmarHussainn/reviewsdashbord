@@ -41,8 +41,8 @@ const App = () => {
           <img src={Chart} alt="" className="w-[50%]" />
         </div>
       </div>
-      <div className="flex items-center ">
-        <div className="p-4 m-4 rounded-lg shadow-md bg-[#FFFFFF] flex gap-6 w-full max-w-[716px]">
+      <div className="flex items-center justify-center ">
+        <div className="p-4 py-[30px] m-4 rounded-lg shadow-md bg-[#FFFFFF] flex gap-6 w-full max-w-[716px]">
           <div className="w-[50%]">
             <h1 className="text-2xl font-bold text-[#3F6884] font-poppins">
               Business Review
@@ -64,13 +64,13 @@ const App = () => {
             <img src={Business} alt="business" />
           </div>
         </div>
-        <div className="rounded-lg shadow-md mx-2  flex items-center  bg-[#FFFFFF]">
+        <div className="rounded-lg px-3 shadow-md mx-2  flex items-center  bg-[#FFFFFF]">
           <img src={Frame} alt="" className=" my-3  " />
         </div>
       </div>
 
-      <div className="flex items-center ">
-        <div className="rounded-lg shadow-md py-1.5 mx-2 flex-col flex items-start px-4 bg-[#FFFFFF] hover:bg-[#FEC324]">
+      <div className="flex items-center justify-center ">
+        <div className="rounded-lg max-w-[350px] w-full shadow-md py-1.5 mx-3 flex-col flex items-start px-4 bg-[#FFFFFF] hover:bg-[#FEC324]">
           <div className="font-dm-sans w-full ">
             <div className="flex justify-between w-full items-center mt-3">
               <p className="text-xs text-[#A3AED0]">Spent This Month</p>
