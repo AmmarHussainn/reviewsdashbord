@@ -1,15 +1,12 @@
-import Dashboard from "./Components/Dashboard";
-import Sidebar from "./Components/Sidebar";
-import InnerBar from "./Components/Inner/InnerBar";
+
+import Router from "./Components/Router/Router";
+
 
 function App() {
   return (
-    // <div className="flex">
-    // <Sidebar/>
-    // <Dashboard/>
-    // </div>
+
     <div>
-<InnerBar/>
+      <Router/>
     </div>
   );
 }

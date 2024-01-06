@@ -1,6 +1,7 @@
 // Sidebar.js
 import React from 'react';
-import { Avatar, activityicon, dashButton, libraryicon, logouticon, payouticon, schedulesicon, securityicon, settingsicon } from '../assets';
+import { Link } from 'react-router-dom'; 
+import { Avatar, activityicon, dashButton, libraryicon, logouticon, payouticon, schedulesicon, securityicon, settingsicon } from '../../assets';
 
 const Sidebar = () => {
   return (
@@ -40,6 +41,7 @@ const Sidebar = () => {
         <div className="flex gap-1 py-1 px-2 hover:border-2 hover:rounded-lg"><img src={schedulesicon} alt="" />Schedules</div>
         <div className="flex gap-1 py-1 px-2 hover:border-2 hover:rounded-lg"><img src={payouticon} alt="" />Payouts</div>
         <div className="flex gap-1 py-1 px-2 hover:border-2 hover:rounded-lg"><img src={settingsicon} alt="" />Settings</div>
+        <div className="flex gap-1 py-1 px-2 hover:border-2 hover:rounded-lg"><Link to="/piechart">See Reviews</Link></div>
       </nav>
       <div>
       <div className="flex gap-1 py-1 px-2 hover:border-2 mr-10 hover:rounded-lg"><img src={logouticon} alt=""/><p>Log Out</p></div>

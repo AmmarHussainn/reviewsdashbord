@@ -1,12 +1,15 @@
 // App.js
 import React from "react";
 
-import { Business, Chart, Frame, Graph, Group, Icon, bargraph1, cash, chartgraph, lorem, stars, tick } from "../assets";
+import { Business, Chart, Frame, Graph, Group, Icon, bargraph1, cash, chartgraph, lorem, stars, tick } from "../../assets";
+import Sidebar from "./Sidebar";
 
 const App = () => {
 
   return (
-    <div className="">
+    <div className="flex">
+      <Sidebar/>
+    <div className="bg-[#3F6884]">
       <div className="my-2 mx-2 "><h3 className='text-2xl text-white my-3'>Charles Robie</h3>
         <h1 className='text-5xl text-white my-3'>Welcome Reviews Dashboard</h1></div>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 place-content-between gap-4 px-2 place-items-center">
@@ -107,6 +110,7 @@ const App = () => {
         </div>
 
       </div>
+    </div>
     </div>
   );
 };
