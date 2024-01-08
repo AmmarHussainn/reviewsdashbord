@@ -279,6 +279,7 @@ const Charts = () => {
       let bodyData;
 
       const { name } = formData;
+      // apiUrl ='https://jnjd8s9d-8000.euw.devtunnels.ms/scrape_trustpilot/';
       apiUrl = 'http://16.170.240.231:8000/scrape_trustpilot/';
       method = 'POST';
       bodyData = JSON.stringify({ name });
@@ -296,7 +297,7 @@ const Charts = () => {
       console.log(data, "This is my api");
     } catch (error) {
       console.error('Error fetching data:', error);
-      setApiData({ error: `Fetching data from ${formData.endpoint} API.` });
+      setApiData({ error: `Error Fetching data.` });
     } finally {
       setLoading(false); // Reset loading to false after fetching data
       setGetReviewsClicked(false); 
@@ -339,7 +340,7 @@ const Charts = () => {
             Enter URL:
           </label>
           <input
-            placeholder='www.xyz.com'
+            placeholder='www.xyz.com or xyz.com'
             type="text"
             id="urlInput"
             name="name"
@@ -392,10 +393,10 @@ const Charts = () => {
       }]
     };
 
-    const getEmojiForScore = (s) => {
-      if (s >= 0.7) {
+    const getEmojiForScore = (stars) => {
+      if (stars >= 4) {
         return '😄'; // Happy
-      } else if (s >= 0.5) {
+      } else if (stars >= 3) {
         return '😐'; // Neutral
       } else {
         return '😞'; // Sad
@@ -439,7 +440,7 @@ const Charts = () => {
                 <div className="mt-2">
                   <p className="font-semibold">Stars: {apiData.stars[index]}</p>
                   {getStarRating(apiData.stars[index])}
-                  <p className="font-semibold">Emoji: {getEmojiForScore(apiData.score[index])}</p>
+                  <p className="font-semibold">{getEmojiForScore(apiData.stars[index])}</p>
                 </div>
               )}
             </div>
