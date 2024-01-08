@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
-  const navigate = useNavigate(); // To access the navigate function for navigation
+  const navigate = useNavigate();
 
   const [loginData, setLoginData] = useState({
     email: '',
@@ -19,41 +19,32 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    sessionStorage.setItem('email', loginData.email);
-  
+
     try {
-      // Make a POST request to the backend endpoint
-      const response = await fetch('https://localhost:3000/users/login', {
+      const response = await fetch('http://localhost:4000/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(loginData),
       });
-  
+
       if (response.ok) {
-        console.log(response);
-        // Assuming the backend returns a JSON object with user type and subscription status
         const result = await response.json();
-  
-        sessionStorage.setItem('userId', result.userId);
-        sessionStorage.setItem('role', result.role);
+        sessionStorage.setItem('userId', result.user.userId);
+        sessionStorage.setItem('role', result.user.role);
 
         // Check user type and navigate to the respective dashboard
-        if (result.role === 'admin') {
-          navigate('/superadmin');
-        } else if (result.role === 'hospital') {
-          navigate('/hospDashboard');
-        } else if (result.role === 'subscriber') {
-          navigate('/userDash');
+        if (result.user.role === 'admin') {
+          navigate('/adminDashboard');
+        } else if (result.user.role === 'user') {
+          navigate('/card');
         } else {
-          navigate('/userDash');
+          navigate('/card');
         }
       } else {
-        // If the response status is not OK, handle login error
-        console.error('Login failed:', response.status);
-        // You can show an error message, update state, etc.
+        const errorData = await response.json();
+        console.error('Login failed:', response.status, errorData.error);
       }
     } catch (error) {
       console.error('Login failed:', error);
@@ -91,7 +82,6 @@ const LoginForm = () => {
         />
 
         <button
-        onClick={()=>navigate('/card')}
           type="submit"
           className="w-full px-4 py-2 text-lg text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none"
         >

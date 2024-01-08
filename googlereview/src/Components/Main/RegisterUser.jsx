@@ -8,6 +8,7 @@ const RegisterUser = () => {
     email: '',
     password: '',
     contactInformation: '',
+    role: 'user', // Default role is set to 'user'
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -24,7 +25,7 @@ const RegisterUser = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:3000/users/register', formData);
+      const response = await axios.post('http://localhost:4000/api/auth/register', formData);
 
       // Handle the response, for example, log it
       console.log('API Response:', response.data);
@@ -41,8 +42,10 @@ const RegisterUser = () => {
   };
 
   return (
-    <div className="container mx-auto mt-8">
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+    <div className='bg-[#3f6884]'>
+    <div className="container mx-auto py-10">
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
+      <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Sign Up</h2>
         <label className="block mb-2 text-lg text-gray-600" htmlFor="name">
           Name
         </label>
@@ -94,6 +97,20 @@ const RegisterUser = () => {
           required
         />
 
+        <label className="block mb-2 text-lg text-gray-600" htmlFor="role">
+          Role
+        </label>
+        <select
+          id="role"
+          name="role"
+          value={formData.role}
+          onChange={handleChange}
+          className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:border-blue-500"
+        >
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+
         {error && <p className="text-red-500">{error}</p>}
 
         <button
@@ -104,6 +121,7 @@ const RegisterUser = () => {
           {loading ? 'Registering...' : 'Register'}
         </button>
       </form>
+    </div>
     </div>
   );
 };
