@@ -10,16 +10,20 @@ const LoginForm = () => {
     password: '',
   });
 
+  const [loginError, setLoginError] = useState(null);
+
   const handleChange = (e) => {
     setLoginData({
       ...loginData,
       [e.target.name]: e.target.value,
     });
+    // Clear the login error when the user starts typing
+    setLoginError(null);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
       const response = await fetch('http://localhost:4000/api/auth/login', {
         method: 'POST',
@@ -28,27 +32,34 @@ const LoginForm = () => {
         },
         body: JSON.stringify(loginData),
       });
-
+  
       if (response.ok) {
         const result = await response.json();
-        sessionStorage.setItem('userId', result.user.userId);
-        sessionStorage.setItem('role', result.user.role);
-
-        // Check user type and navigate to the respective dashboard
-        if (result.user.role === 'admin') {
-          navigate('/adminDashboard');
-        } else if (result.user.role === 'user') {
-          navigate('/card');
+  
+        if (result?.user?.role) {
+          if (result.user.role === 'admin') {
+            navigate('/adminDashboard');
+          } else if (result.user.role === 'user' && result.user.status === 'Approved') {
+            navigate('/card');
+          } else {
+            console.error('Login failed: Invalid role or status');
+            setLoginError('Invalid login'); // Set the login error message
+          }
         } else {
-          navigate('/card');
+          console.error('Login failed: Role information not found in response');
+          setLoginError('Invalid login'); // Set the login error message
         }
+      } else if (response.status === 404) {
+        // Check if the response status is 404 (Not Found) for user not registered
+        setLoginError('User not registered');
       } else {
         const errorData = await response.json();
         console.error('Login failed:', response.status, errorData.error);
+        setLoginError('Invalid login'); // Set the login error message for other errors
       }
     } catch (error) {
       console.error('Login failed:', error);
-      // Handle other errors, show an error message, etc.
+      setLoginError('Invalid login'); // Set the login error message for other errors
     }
   };
 
@@ -80,6 +91,10 @@ const LoginForm = () => {
           className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:border-blue-500"
           required
         />
+
+        {loginError && (
+          <div className="text-red-500 mb-4">{loginError}</div>
+        )}
 
         <button
           type="submit"
