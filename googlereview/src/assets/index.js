@@ -19,6 +19,17 @@ import settingsicon from "./Images/settingsicon.png"
 import activityicon from "./Images/activityicon.png"
 import logouticon from "./Images/logouticon.png"
 import dashButton from "./Images/dashDabba.png"
+import icontwit from "./Images/icontwit.png"
+import iconinsta from "./Images/iconinsta.png"
+import iconpin from "./Images/iconpin.png"
+import iconfb from "./Images/iconfb.png"
+import birdeye from "./Images/birdeye.png"
+import phone from "./Images/phone.png"
+import signin from "./Images/signin.png"
+import logo from "./Images/logo.png"
+import homebanner from "./Images/homeBanner.png"
+import arrow from "./Images/arrow.png"
+import solution from "./Images/solution.png"
 
 export{ 
     dashButton,
@@ -42,4 +53,16 @@ export{
     stars,
     libraryicon,
     payouticon,
+    icontwit,
+    iconinsta,
+    iconpin,
+    iconfb,
+    birdeye,
+    phone,
+    signin,
+    logo,
+    homebanner,
+    arrow,
+    solution,
+
 }

@@ -1,12 +1,16 @@
 
-import Router from "./Components/Router/Router";
+// import Router from "./Components/Router/Router";
+import Footer from "./Components/AdminWebsite/Footer";
+import Header from "./Components/AdminWebsite/Navbar";
+import Home from "./Components/AdminWebsite/Home";
 
 
 function App() {
   return (
 
     <div>
-      <Router/>
+      {/* <Router/> */}
+      <Home/>
     </div>
   );
 }
