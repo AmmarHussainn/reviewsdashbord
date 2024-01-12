@@ -7,7 +7,7 @@ const Card = () => {
             <p className='text-4xl md:text-4xl py-20 font-bold font-poppins text-center mx-auto'>Everything you need to run a digital business</p>
 
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-4'>
-            <div className="max-w-sm mx-auto overflow-hidden rounded-md border border-[#604D90] w-[205px] h-[180px]">
+            <div className="max-w-sm mx-auto overflow-hidden rounded-md border border-[#604D90] w-[210px] h-[150px]">
                     {/* Image */}
                     <img className="w-5 h-4 object-cover my-2 mx-2" src={phone} alt="Card" />
 
@@ -17,17 +17,16 @@ const Card = () => {
                         <h2 className="text-xl font-bold mb-2">Reviews</h2>
 
                         {/* Text */}
-                        <p className="text-gray-700 mb-4">Improve your repotation</p>
+                        <p className="text-gray-700">Improve your repotation</p>
 
-                        {/* Arrow */}
-                        <div className="flex items-center">
-                            <div>
-                                &#8594;
-                            </div>
-                        </div>
+                        <div className='ml-[150px]' style={{ fontSize: '25px' }}>
+    &#8594;
+</div>
+
+
                     </div>
                 </div>
-                <div className="max-w-sm mx-auto overflow-hidden rounded-md border border-[#604D90] w-[205px] h-[180px]">
+                <div className="max-w-sm mx-auto overflow-hidden rounded-md border border-[#604D90] w-[210px] h-[180px]">
                     {/* Image */}
                     <img className="w-5 h-4 object-cover my-2 mx-2" src={phone} alt="Card" />
 
@@ -40,7 +39,7 @@ const Card = () => {
                         <p className="text-gray-700 mb-4">Get Found Online</p>
 
                         {/* Arrow */}
-                        <div className="flex items-center">
+                        <div className="flex items-end ml-[150px]">
                             <div>
                                 &#8594;
                             </div>

@@ -30,8 +30,13 @@ import logo from "./Images/logo.png"
 import homebanner from "./Images/homeBanner.png"
 import arrow from "./Images/arrow.png"
 import solution from "./Images/solution.png"
+import fbLogo from "./Images/fbLogo.png"
+import googleLogo from "./Images/googleLogo.png"
+import trustpilotLogo from "./Images/trustpilotLogo.png"
 
 export{ 
+    trustpilotLogo,
+    googleLogo,
     dashButton,
     logouticon,
     activityicon,
@@ -64,5 +69,6 @@ export{
     homebanner,
     arrow,
     solution,
+    fbLogo,
 
 }
